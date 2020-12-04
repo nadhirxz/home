@@ -14,7 +14,6 @@
 }
 
 .App-header {
-  background-color: #202429;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,4 +25,61 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-hidden {
+    width: 100%;
+    opacity:0;
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+}
+
+.intro-wrapper {
+	background-color: #181A1A;
+	border:2px solid #111;
+    border-radius:5px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2em 16em;
+    grid-template-areas: 
+        "nav-wrapper nav-wrapper"
+        "left-column right-column"
+    ;
+}
+.nav-wrapper {
+    grid-area: nav-wrapper;
+    border-bottom:2px solid #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-column {
+    grid-area: left-column;
+}
+.right-column {
+    grid-area: right-column;
+}
+
+.dots-wrapper {
+    display: flex;
+    padding: 10px;
+}
+
+.dot {
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin: 5px;
+
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+.contact-nav {
+    padding: 10px;
 }
