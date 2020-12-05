@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -21,10 +16,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .App-hidden {
@@ -44,7 +35,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2em 16em;
+    grid-template-rows: 2em;
     grid-template-areas: 
         "nav-wrapper nav-wrapper"
         "left-column right-column"
@@ -58,9 +49,13 @@
     align-items: center;
 }
 .left-column {
+    padding: 10px 5px 30px 5px;
+    width: 70%;
+    margin: auto;
     grid-area: left-column;
 }
 .right-column {
+    padding: 10px 5px 30px 5px;
     grid-area: right-column;
 }
 
@@ -82,4 +77,12 @@
 
 .contact-nav {
     padding: 10px;
+}
+
+.right-column:svg {
+    border: 1px solid #fff;
+}
+
+svg {
+    padding: 5px 8px;
 }
