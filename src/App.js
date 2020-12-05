@@ -30,7 +30,8 @@ function App() {
                         <div className="contact-nav"><a href="mailto:nadhir02@gmail.com">contact</a></div>
                     </div>
                     <div className="left-column">
-                        test
+                        <h1>I'm a Developer</h1>
+                        <p>I make stuf bla bla bla idk i use a lot of things idk how to express myself haha lol sorry.<br/>Lorem ipsum that latin thing idk haha filler goes brrrrr</p>
                     </div>
                     <div className="right-column">
                         <h4>Languages</h4>
