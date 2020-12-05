@@ -7,7 +7,6 @@ import {ReactComponent as MYSQL} from './components/icons/mysql.svg';
 import {ReactComponent as PYTHON} from './components/icons/python.svg';
 import {ReactComponent as JAVA} from './components/icons/java.svg';
 import {ReactComponent as C_LANG} from './components/icons/c.svg';
-
 import {ReactComponent as NODEJS} from './components/icons/nodejs.svg';
 import {ReactComponent as EXPRESS} from './components/icons/express.svg';
 import {ReactComponent as MONGODB} from './components/icons/mongodb.svg';
@@ -39,8 +38,7 @@ function App() {
                         <PYTHON width={iconSize} height={iconSize} title="Python" />
                         <JAVA width={iconSize} height={iconSize} title="Java" />
                         <C_LANG width={iconSize} height={iconSize} title="C" />
-
-                        <h4>Libraries/Tools</h4>
+                        <h4>Libraries / Tools</h4>
                         <NODEJS width={iconSize} height={iconSize} title="Node.js" />
                         <EXPRESS style={{fill:"#fff"}} width={iconSize} height={iconSize} title="Express.js" />
                         <MONGODB width={iconSize} height={iconSize} title="MongoDB" />

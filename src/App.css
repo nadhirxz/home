@@ -27,6 +27,16 @@
     transition: opacity 2s;
 }
 
+#header-text {
+    position:absolute;
+    margin-top: auto;
+
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
+}
+
 .intro-wrapper {
 	background-color: #181A1A;
 	border:2px solid #111;

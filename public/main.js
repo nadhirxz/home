@@ -7,8 +7,10 @@ let interval = setInterval(() => {
     if (i==mainText.length) {
         clearInterval(interval);
         setTimeout(() => {
-            document.getElementsByClassName('App-header')[0].style.justifyContent = "left";
-            document.getElementsByClassName('App-hidden')[0].style.opacity = 1;
+            document.getElementById('header-text').style.transform = 'translateY(-450%)';
+            setTimeout(() => {
+                document.getElementsByClassName('App-hidden')[0].style.opacity = 1;
+            }, 300);
         }, 500);
     }
 }, 100);
