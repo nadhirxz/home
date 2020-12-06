@@ -29,7 +29,6 @@
 #header-text {
     position:absolute;
     margin-top: auto;
-
     -moz-transition:all .8s;
     -webkit-transition:all .8s;
     -o-transition:all .8s;
@@ -44,11 +43,11 @@
     height: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 2em;
     grid-template-areas: 
-        "nav-wrapper nav-wrapper"
-        "left-column right-column"
+        "nav-wrapper"
+        "content-wrapper"
     ;
 }
 .nav-wrapper {
@@ -58,15 +57,31 @@
     justify-content: space-between;
     align-items: center;
 }
-.left-column {
-    padding: 10px 5px 30px 5px;
-    width: 70%;
+.content-wrapper {
+    grid-area: content-wrapper;
     margin: auto;
-    grid-area: left-column;
+    height: 100%;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+div.content-wrapper::-webkit-scrollbar {
+    width: 5px;
+    background-color: #111;
+}
+div.content-wrapper::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+div.content-wrapper::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+}
+.left-column {
+    padding: 10px 20px 40px 50px;
+    margin: auto;
 }
 .right-column {
-    padding: 10px 5px 30px 5px;
-    grid-area: right-column;
+    padding: 10px 10px 40px 20px;
 }
 
 .dots-wrapper {

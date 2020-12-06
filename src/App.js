@@ -24,27 +24,29 @@ function App() {
                     <div className="nav-wrapper">
                         <div className="dots-wrapper"><Dot color="#FC6058" /><Dot color="#FEC02F" /><Dot color="#2ACA3E" /></div>
                     </div>
-                    <div className="left-column"> {/* eslint-disable-next-line */}
-                        <h1 id="title-text"></h1> {/* eslint-disable-next-line */}
-                        <p id="content-text"></p>
-                    </div>
-                    <div className="right-column">
-                        <h4>Languages</h4>
-                        <JS width={iconSize} height={iconSize} title="JavaScript" />
-                        <HTML width={iconSize} height={iconSize} title="HTML5" />
-                        <CSS width={iconSize} height={iconSize} title="CSS3" />
-                        <MYSQL width={iconSize} height={iconSize} title="MySQL" />
-                        <PYTHON width={iconSize} height={iconSize} title="Python" />
-                        <JAVA width={iconSize} height={iconSize} title="Java" />
-                        <C_LANG width={iconSize} height={iconSize} title="C" />
-                        <h4>Libraries / Tools</h4>
-                        <NODEJS width={iconSize} height={iconSize} title="Node.js" />
-                        <EXPRESS style={{ fill: "#fff" }} width={iconSize} height={iconSize} title="Express.js" />
-                        <MONGODB width={iconSize} height={iconSize} title="MongoDB" />
-                        <JQUERY width={iconSize} height={iconSize} title="jQuery" />
-                        <BOOTSTRAP width={iconSize} height={iconSize} title="Bootstrap" />
-                        <REACT width={iconSize} height={iconSize} title="React" />
-                        <GIT width={iconSize} height={iconSize} title="Git" />
+                    <div className="content-wrapper">
+                        <div className="left-column"> {/* eslint-disable-next-line */}
+                            <h1 id="title-text"></h1> {/* eslint-disable-next-line */}
+                            <p id="content-text"></p>
+                        </div>
+                        <div className="right-column">
+                            <h4>Languages</h4>
+                            <JS width={iconSize} height={iconSize} title="JavaScript" />
+                            <HTML width={iconSize} height={iconSize} title="HTML5" />
+                            <CSS width={iconSize} height={iconSize} title="CSS3" />
+                            <MYSQL width={iconSize} height={iconSize} title="MySQL" />
+                            <PYTHON width={iconSize} height={iconSize} title="Python" />
+                            <JAVA width={iconSize} height={iconSize} title="Java" />
+                            <C_LANG width={iconSize} height={iconSize} title="C" />
+                            <h4>Libraries / Tools</h4>
+                            <NODEJS width={iconSize} height={iconSize} title="Node.js" />
+                            <EXPRESS style={{ fill: "#fff" }} width={iconSize} height={iconSize} title="Express.js" />
+                            <MONGODB width={iconSize} height={iconSize} title="MongoDB" />
+                            <JQUERY width={iconSize} height={iconSize} title="jQuery" />
+                            <BOOTSTRAP width={iconSize} height={iconSize} title="Bootstrap" />
+                            <REACT width={iconSize} height={iconSize} title="React" />
+                            <GIT width={iconSize} height={iconSize} title="Git" />
+                        </div>
                     </div>
                 </div>
             </header>
