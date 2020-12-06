@@ -63,6 +63,9 @@
     overflow-y: scroll;
     display: grid;
     grid-template-columns: 1fr 1.3fr;
+    grid-template-areas: 
+        "left-column right-column"
+    ;
 }
 div.content-wrapper::-webkit-scrollbar {
     width: 5px;
@@ -75,12 +78,14 @@ div.content-wrapper::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 .left-column {
+    grid-area: left-column;
     padding: 10px 20px 40px 50px;
     width: 1fr;
     min-width: 1fr;
     margin: auto;
 }
 .right-column {
+    grid-area: right-column;
     padding: 10px 10px 40px 20px;
     margin: auto;
 }
@@ -110,4 +115,14 @@ div.content-wrapper::-webkit-scrollbar-thumb {
 
 svg {
     padding: 5px 8px;
+}
+
+@media screen and (max-width: 920px){
+    .content-wrapper {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+            'left-column'
+            'right-column'
+        ;
+    }
 }
