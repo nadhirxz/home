@@ -67,7 +67,6 @@
 }
 div.content-wrapper::-webkit-scrollbar {
     width: 5px;
-    background-color: #111;
 }
 div.content-wrapper::-webkit-scrollbar-track {
     border-radius: 10px;
