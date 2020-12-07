@@ -1,6 +1,5 @@
 headerText = document.getElementById('header-text');
 headText = headerText.innerHTML;
-console.log(headText)
 headerText.innerHTML = "";
 
 hidden = document.getElementsByClassName('App-hidden')[0];
