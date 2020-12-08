@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ProgressBar from '../components/ProgressBar';
-import { printingChars } from '../functions.js'
+import { printingChars, printLetterByLetter, interval } from '../functions.js';
+
+const title = 'My Skills';
 
 export default class Skills extends Component {
     componentDidMount() {
+        printLetterByLetter(document.getElementById('title'), title, interval);
         printingChars()
     }
     render() {
@@ -24,7 +27,7 @@ export default class Skills extends Component {
         ]
         return (
             <motion.div initial="initial" animate="in" exit="out" variants={this.props.pageVariants} transition={this.props.pageTransition}>
-                <h1>My Skills</h1>
+                <h1 id='title'></h1>
                 <div className="main-content">
                     <div className="left-column">
                         {skills.slice(0, 6).map((i) => (

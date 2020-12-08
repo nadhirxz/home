@@ -15,7 +15,6 @@ import { ReactComponent as BOOTSTRAP } from '../components/icons/bootstrap.svg';
 import { ReactComponent as REACT } from '../components/icons/react.svg';
 import { ReactComponent as GIT } from '../components/icons/git.svg';
 import { motion } from 'framer-motion';
-import { printLetterByLetter } from '../functions.js';
 
 export default class Home extends Component {
     render() {

@@ -15,34 +15,37 @@ function App() {
         const introWrapper = document.getElementsByClassName('intro-wrapper')[0];
 
         const headerText = document.getElementById('header-text');
-        const headText = headerText.innerHTML;
-        headerText.innerHTML = "";
 
-        printLetterByLetter(headerText, headText, 100).then(() => {
-            setTimeout(() => {
-                headerText.style.transform = 'translateY(-800%)';
+        if (location.pathname == '/') {
+            printLetterByLetter(headerText, headText, 100).then(() => {
                 setTimeout(() => {
-                    headerText.style.opacity = 0;
-                    introWrapper.style.opacity = 1;
+                    headerText.style.transform = 'translateY(-800%)';
+                    setTimeout(() => {
+                        headerText.style.opacity = 0;
+                        introWrapper.style.opacity = 1;
 
-                    headerText.parentNode.removeChild(headerText);
+                        headerText.parentNode.removeChild(headerText);
 
-                    const titleText = document.getElementById('title-text');
-                    titleText.innerHTML = "";
+                        const titleText = document.getElementById('title-text');
+                        titleText.innerHTML = "";
 
-                    const contentText = document.getElementById('content-text');
-                    contentText.innerHTML = "";
+                        const contentText = document.getElementById('content-text');
+                        contentText.innerHTML = "";
 
-                    printLetterByLetter(document.getElementById('title-text'), devText, 100);
-                    printLetterByLetter(document.getElementById('content-text'), contText, 50);
-                }, 400);
-            }, 700);
-        });
+                        printLetterByLetter(document.getElementById('title-text'), devText, 100);
+                        printLetterByLetter(document.getElementById('content-text'), contText, 50);
+                    }, 400);
+                }, 700);
+            });
+        } else {
+            headerText.parentNode.removeChild(headerText);
+            introWrapper.style.opacity = 1;
+        }
     }, [])
     return (
         <div className="App">
             <header className="App-header"> {/* eslint-disable-next-line */}
-                <h1 id="header-text">{headText}</h1>
+                <h1 id="header-text"></h1>
                 <AnimatePresence>
                     <div className="intro-wrapper hidden">
                         <div className="nav-wrapper">

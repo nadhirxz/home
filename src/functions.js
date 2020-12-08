@@ -30,3 +30,5 @@ export function printLetterByLetter(destination, message, interval) {
         }, interval);
     });
 }
+
+export const interval = 100;
