@@ -5,24 +5,32 @@ import ProgressBar from '../components/ProgressBar';
 
 export default class Skills extends Component {
     render() {
+        const skills = [
+            { name: 'JavaScript', l: 90 },
+            { name: 'HTML/CSS', l: 85 },
+            { name: 'Bootstrap', l: 65 },
+            { name: 'jQuery', l: 40 },
+            { name: 'React', l: 20 },
+            { name: 'Git/GitHub', l: 60 },
+            { name: 'JS Back-end', l: 80, eg: 'Node/Express' },
+            { name: 'Databases', l: 55, eg: 'SQL/MongoDB' },
+            { name: 'Python', l: 60 },
+            { name: 'OOP', l: 50, eg: 'Java' },
+            { name: 'C', l: 40 }
+        ]
         return (
             <motion.div initial="initial" animate="in" exit="out" variants={this.props.pageVariants} transition={this.props.pageTransition}>
                 <h1>My Skills</h1>
                 <div className="main-content">
                     <div className="left-column">
-                        <ProgressBar name='JavaScript' limit={90} />
-                        <ProgressBar name='HTML/CSS' limit={85} />
-                        <ProgressBar name='Bootstrap' limit={65} />
-                        <ProgressBar name='jQuery' limit={40} />
-                        <ProgressBar name='React' limit={20} />
-                        <ProgressBar name='Git/GitHub' limit={60} />
+                        {skills.slice(0, 6).map((i) => (
+                            <ProgressBar name={i.name} limit={i.l} eg={i.eg} />
+                        ))}
                     </div>
                     <div className="right-column">
-                        <ProgressBar name='JS Back-end' eg='Node/Express' limit={80} />
-                        <ProgressBar name='Databases' eg='SQL/Mongo' limit={55} />
-                        <ProgressBar name='Python' limit={60} />
-                        <ProgressBar name='OOP' eg='Java' limit={50} />
-                        <ProgressBar name='C' limit={40} />
+                        {skills.slice(6).map((i) => (
+                            <ProgressBar name={i.name} limit={i.l} eg={i.eg} />
+                        ))}
                     </div>
                 </div>
                 <Link to="/"><button className="btn" style={{ width: '10%' }}>Back</button></Link>
