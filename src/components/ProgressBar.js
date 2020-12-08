@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class ProgressBar extends Component {
     getColor = () => {
-        return this.props.limit < 35 ? '#ec5729' : this.props.limit < 50 ? '#eee131' : this.props.limit < 75 ? '#9de63d' : '#07c293';
+        return this.props.limit < 35 ? '#c28d07' : this.props.limit < 50 ? '#c2b207' : this.props.limit < 75 ? '#55c207' : '#07c293';
     }
     render() {
         return (
