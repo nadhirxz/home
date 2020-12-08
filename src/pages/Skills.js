@@ -24,12 +24,12 @@ export default class Skills extends Component {
                 <div className="main-content">
                     <div className="left-column">
                         {skills.slice(0, 6).map((i) => (
-                            <ProgressBar name={i.name} limit={i.l} eg={i.eg} />
+                            <ProgressBar name={i.name} key={i.name} limit={i.l} eg={i.eg} />
                         ))}
                     </div>
                     <div className="right-column">
                         {skills.slice(6).map((i) => (
-                            <ProgressBar name={i.name} limit={i.l} eg={i.eg} />
+                            <ProgressBar name={i.name} key={i.name} limit={i.l} eg={i.eg} />
                         ))}
                     </div>
                 </div>
