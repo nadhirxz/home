@@ -14,6 +14,7 @@ import { ReactComponent as JQUERY } from '../components/icons/jquery.svg';
 import { ReactComponent as BOOTSTRAP } from '../components/icons/bootstrap.svg';
 import { ReactComponent as REACT } from '../components/icons/react.svg';
 import { ReactComponent as GIT } from '../components/icons/git.svg';
+import { ReactComponent as GITHUB } from '../components/icons/github.svg';
 import { motion } from 'framer-motion';
 
 export default class Home extends Component {
@@ -22,34 +23,40 @@ export default class Home extends Component {
             <motion.div initial="initial" animate="in" exit="out" variants={this.props.pageVariants} transition={this.props.pageTransition}>
                 <div className="main-content">
                     <div className="left-column" style={{ margin: 'auto' }}> {/* eslint-disable-next-line */}
-                        <h1 id="title-text">{this.props.devText}</h1> {/* eslint-disable-next-line */}
+                        <h1 id="title-text">{this.props.helloText}</h1> {/* eslint-disable-next-line */}
                         <p id="content-text">{this.props.contText}</p>
+                        <GITHUB style={style} title="Github" />
                     </div>
                     <div className="right-column">
-                        <h4>Languages</h4>
-                        <JS width={iconSize} height={iconSize} title="JavaScript" />
-                        <HTML width={iconSize} height={iconSize} title="HTML5" />
-                        <CSS width={iconSize} height={iconSize} title="CSS3" />
-                        <MYSQL width={iconSize} height={iconSize} title="MySQL" />
-                        <PYTHON width={iconSize} height={iconSize} title="Python" />
-                        <JAVA width={iconSize} height={iconSize} title="Java" />
-                        <C_LANG width={iconSize} height={iconSize} title="C" />
-                        <h4>Libraries / Tools</h4>
-                        <NODEJS width={iconSize} height={iconSize} title="Node.js" />
-                        <EXPRESS style={{ fill: "#fff" }} width={iconSize} height={iconSize} title="Express.js" />
-                        <MONGODB width={iconSize} height={iconSize} title="MongoDB" />
-                        <JQUERY width={iconSize} height={iconSize} title="jQuery" />
-                        <BOOTSTRAP width={iconSize} height={iconSize} title="Bootstrap" />
-                        <REACT width={iconSize} height={iconSize} title="React" />
-                        <GIT width={iconSize} height={iconSize} title="Git" />
+                        <h4 id='languages'>{this.props.langText}</h4>
+                        <JS style={style} title="JavaScript" />
+                        <HTML style={style} title="HTML5" />
+                        <CSS style={style} title="CSS3" />
+                        <MYSQL style={style} title="MySQL" />
+                        <PYTHON style={style} title="Python" />
+                        <JAVA style={style} title="Java" />
+                        <C_LANG style={style} title="C" />
+                        <h4 id='tools'>{this.props.toolsText}</h4>
+                        <NODEJS style={style} title="Node.js" />
+                        <EXPRESS style={{...style,...{fill: '#fff'}}} title="Express.js" />
+                        <MONGODB style={style} title="MongoDB" />
+                        <JQUERY style={style} title="jQuery" />
+                        <BOOTSTRAP style={style} title="Bootstrap" />
+                        <REACT style={style} title="React" />
+                        <GIT style={style} title="Git" />
 
-                        <Link to="/skills"><button className="btn" style={{ width: '40%' }}>Skills</button></Link>
                         <br />
-                        <Link to="/projects"><button className="btn" style={{ width: '40%' }}>Projects</button></Link>
+                        <Link id="skills-link" to="/skills"><button className="btn" style={{ width: '40%'}}>Skills</button></Link>
+                        <br />
+                        <Link id="projects-link" to="/projects"><button className="btn" style={{ width: '40%'}}>Projects</button></Link>
                     </div>
                 </div>
             </motion.div>
         )
     }
 }
-const iconSize = "50px";
+const style = {
+    width: '50px',
+    height: '50px',
+    transition: 'opacity 2s'
+}

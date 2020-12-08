@@ -209,6 +209,9 @@ svg {
         margin: auto;
         padding: 0px;
     }
+    .right-column svg {
+        margin: 10px;
+    }
     .progress {
         margin: 10px 0;
         width: 90%;

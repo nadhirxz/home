@@ -31,4 +31,27 @@ export function printLetterByLetter(destination, message, interval) {
     });
 }
 
-export const interval = 100;
+export function showHidden() {
+    Array.from(document.getElementsByClassName('hidden')).forEach(e => {
+        e.style.opacity = 1;
+    });
+}
+
+export function hideIcons() {
+    for (const element of Array.from(document.getElementsByClassName('right-column')[0].getElementsByTagName('svg'))) {
+        element.style.opacity = 0;
+    }
+}
+
+export async function showIcons(start = 0, end = 14) {
+    for (const element of Array.from(document.getElementsByClassName('right-column')[0].getElementsByTagName('svg')).slice(start, end)) {
+        await new Promise((resolve) => {
+            setTimeout(() => {
+                element.style.opacity = 1;
+                resolve();
+            }, 150);
+        })
+    }
+}
+
+export const titleInterval = 100;
