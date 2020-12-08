@@ -201,9 +201,11 @@ svg {
         ;
     }
     .left-column  {
+        margin: auto;
         padding: 0px;
     }
     .right-column {
+        margin: auto;
         padding: 0px;
     }
     .progress {
