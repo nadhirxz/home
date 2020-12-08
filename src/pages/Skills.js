@@ -12,7 +12,7 @@ export default class Skills extends Component {
             { name: 'jQuery', l: 40 },
             { name: 'React', l: 20 },
             { name: 'Git/GitHub', l: 60 },
-            { name: 'JS Back-end', l: 80, eg: 'Node/Express' },
+            { name: 'Web Back-end', l: 80, eg: 'Node/Express' },
             { name: 'Databases', l: 55, eg: 'SQL/MongoDB' },
             { name: 'Python', l: 60 },
             { name: 'OOP', l: 50, eg: 'Java' },
