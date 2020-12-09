@@ -11,12 +11,14 @@ import { printLetterByLetter, hideIcons, hideSocialIcons, showIcons, showSocialI
 
 function App() {
     const location = useLocation();
+    const mainPath = '/nadhirxz';
+
     useEffect(() => { // when the page loads
         const introWrapper = document.getElementsByClassName('intro-wrapper')[0];
 
         const headerText = document.getElementById('header-text');
 
-        if (location.pathname === '/' && headerText) {
+        if (location.pathname === mainPath && headerText) {
             hideIcons();
             hideSocialIcons();
             
@@ -80,9 +82,9 @@ function App() {
                         </div>
                         <div className="content-wrapper">
                             <Switch location={location} key={location.pathname}>
-                                <Route path="/" exact render={() => <Home pageVariants={pageVariants} pageTransition={pageTransition} helloText={helloText} contText={contText} langText={langText} toolsText={toolsText} />} />
-                                <Route path="/skills" render={() => <Skills pageVariants={pageVariants} pageTransition={pageTransition} />} />
-                                <Route path="/projects" render={() => <Projects pageVariants={pageVariants} pageTransition={pageTransition} />} />
+                                <Route path={mainPath} exact render={() => <Home pageVariants={pageVariants} pageTransition={pageTransition} helloText={helloText} contText={contText} langText={langText} toolsText={toolsText} />} />
+                                <Route path="/skills" render={() => <Skills pageVariants={pageVariants} pageTransition={pageTransition} mainPath={mainPath} />} />
+                                <Route path="/projects" render={() => <Projects pageVariants={pageVariants} pageTransition={pageTransition} mainPath={mainPath} />} />
                                 <Route component={NotFound404} />
                             </Switch>
                         </div>

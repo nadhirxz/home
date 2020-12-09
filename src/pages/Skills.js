@@ -41,7 +41,7 @@ export default class Skills extends Component {
                         ))}
                     </div>
                 </div>
-                <Link to="/"><button className="btn" style={{ width: '10%' }}>Back</button></Link>
+                <Link to={this.props.mainPath}><button className="btn" style={{ width: '10%' }}>Back</button></Link>
             </motion.div>
         )
     }

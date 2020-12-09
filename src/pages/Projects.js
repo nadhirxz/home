@@ -16,7 +16,7 @@ export default class Projects extends Component {
                 {/* eslint-disable-next-line */}
                 <h1 id='title'></h1>
                 <p className='print-chars'>Such empty. I'll add them later ..</p>
-                <Link to="/"><button className="btn" style={{ width: '10%' }}>Back</button></Link>
+                <Link to={this.props.mainPath}><button className="btn" style={{ width: '10%' }}>Back</button></Link>
             </motion.div>
         )
     }
