@@ -14,11 +14,12 @@ body {
 }
 
 a {
-    color: #0FA;
+    color: #0CF;
     text-decoration: none;
+    transition: color .5s;
 }
 
 a:hover {
-    color: #0CF;
+    color: #0FA;
     text-decoration: none;
 }

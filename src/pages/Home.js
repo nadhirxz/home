@@ -15,6 +15,8 @@ import { ReactComponent as BOOTSTRAP } from '../components/icons/bootstrap.svg';
 import { ReactComponent as REACT } from '../components/icons/react.svg';
 import { ReactComponent as GIT } from '../components/icons/git.svg';
 import { ReactComponent as GITHUB } from '../components/icons/github.svg';
+import { ReactComponent as EMAIL } from '../components/icons/email.svg';
+import { ReactComponent as DISCORD } from '../components/icons/discord.svg';
 import { motion } from 'framer-motion';
 
 export default class Home extends Component {
@@ -25,7 +27,9 @@ export default class Home extends Component {
                     <div className="left-column" style={{ margin: 'auto' }}> {/* eslint-disable-next-line */}
                         <h1 id="title-text">{this.props.helloText}</h1> {/* eslint-disable-next-line */}
                         <p id="content-text">{this.props.contText}</p>
-                        <GITHUB style={style} title="Github" />
+                        <a href="https://github.com/nadhirxz" target="_blank" id="github"><GITHUB className="svg-link" width={style.width} height={style.height} title="Github" /></a>
+                        <a href="mailto:nadhir02@gmail.com" target="_blank" id="email"><EMAIL className="svg-link" width={style.width} height={style.height} title="Email" /></a>
+                        <a href="https://discord.com/users/626920219759083528" target="_blank" id="discord"><DISCORD className="svg-link" width={style.width} height={style.height} title="Discord" /></a>
                     </div>
                     <div className="right-column">
                         <h4 id='languages'>{this.props.langText}</h4>
@@ -38,7 +42,7 @@ export default class Home extends Component {
                         <C_LANG style={style} title="C" />
                         <h4 id='tools'>{this.props.toolsText}</h4>
                         <NODEJS style={style} title="Node.js" />
-                        <EXPRESS style={{...style,...{fill: '#fff'}}} title="Express.js" />
+                        <EXPRESS style={style} title="Express.js" />
                         <MONGODB style={style} title="MongoDB" />
                         <JQUERY style={style} title="jQuery" />
                         <BOOTSTRAP style={style} title="Bootstrap" />
@@ -46,9 +50,9 @@ export default class Home extends Component {
                         <GIT style={style} title="Git" />
 
                         <br />
-                        <Link id="skills-link" to="/skills"><button className="btn" style={{ width: '40%'}}>Skills</button></Link>
+                        <Link id="skills-link" to="/skills"><button className="btn" style={{ width: '40%' }}>Skills</button></Link>
                         <br />
-                        <Link id="projects-link" to="/projects"><button className="btn" style={{ width: '40%'}}>Projects</button></Link>
+                        <Link id="projects-link" to="/projects"><button className="btn" style={{ width: '40%' }}>Projects</button></Link>
                     </div>
                 </div>
             </motion.div>

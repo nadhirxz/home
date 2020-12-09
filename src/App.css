@@ -192,6 +192,13 @@ svg {
         box-shadow: 0 0 30px green;
     }
 }
+.svg-link {
+    fill: #fff;
+    transition: fill .5s, opacity 2s;
+}
+.svg-link:hover {
+    fill: #0FA;
+}
 
 @media screen and (max-width: 950px){
     .main-content {

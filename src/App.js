@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import Skills from './pages/Skills';
 import NotFound404 from './pages/NotFound404';
 import Projects from './pages/Projects';
-import { printLetterByLetter, showHidden, showIcons, hideIcons } from './functions.js';
+import { printLetterByLetter, hideIcons, hideSocialIcons, showIcons, showSocialIcons } from './functions.js';
 
 function App() {
     const location = useLocation();
@@ -18,6 +18,8 @@ function App() {
 
         if (location.pathname === '/' && headerText) {
             hideIcons();
+            hideSocialIcons();
+            
             const languagesText = document.getElementById('languages');
             languagesText.innerHTML = '';
 
@@ -40,10 +42,10 @@ function App() {
                         headerText.parentNode.removeChild(headerText);
 
                         printLetterByLetter(languagesText, langText, 100).then(() => {
-                            showIcons(0,7);
+                            showIcons(0, 7);
                         });
                         printLetterByLetter(librariestooldText, toolsText, 100).then(() => {
-                            showIcons(7,14);
+                            showIcons(7, 14);
                         });
 
                         const titleText = document.getElementById('title-text');
@@ -57,6 +59,7 @@ function App() {
                         printLetterByLetter(document.getElementById('content-text'), contText, 50).then(() => {
                             skillsLink.style.opacity = 1;
                             projectsLink.style.opacity = 1;
+                            showSocialIcons();
                         });
                     }, 400);
                 }, 700);

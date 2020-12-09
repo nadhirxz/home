@@ -43,6 +43,12 @@ export function hideIcons() {
     }
 }
 
+export function hideSocialIcons() {
+    for (const element of Array.from(document.getElementsByClassName('svg-link'))) {
+        element.style.opacity = 0;
+    }
+}
+
 export async function showIcons(start = 0, end = 14) {
     for (const element of Array.from(document.getElementsByClassName('right-column')[0].getElementsByTagName('svg')).slice(start, end)) {
         await new Promise((resolve) => {
@@ -50,6 +56,17 @@ export async function showIcons(start = 0, end = 14) {
                 element.style.opacity = 1;
                 resolve();
             }, 150);
+        })
+    }
+}
+
+export async function showSocialIcons() {
+    for (const element of Array.from(document.getElementsByClassName('svg-link'))) {
+        await new Promise((resolve) => {
+            setTimeout(() => {
+                element.style.opacity = 1;
+                resolve();
+            }, 300);
         })
     }
 }
