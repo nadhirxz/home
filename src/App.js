@@ -11,7 +11,7 @@ import { printLetterByLetter, hideIcons, hideSocialIcons, showIcons, showSocialI
 
 function App() {
     const location = useLocation();
-    const mainPath = '/';
+    const mainPath = '/nadhirxz';
 
     useEffect(() => { // when the page loads
         const introWrapper = document.getElementsByClassName('intro-wrapper')[0];
