@@ -125,6 +125,9 @@ svg {
 .btn:hover {
     background-color: #364f6d;
 }
+.back-btn {
+	width: 10%;
+}
 
 .progress-block {
     width: 100%;
@@ -201,6 +204,9 @@ svg {
 }
 
 @media screen and (max-width: 950px){
+	.back-btn {
+		width: 50%;
+	}
     .main-content {
         grid-template-columns: 1fr;
         grid-template-areas: 
